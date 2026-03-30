@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link, withRouter,Switch, Route } from "react-router-dom";
 import { Menu, Layout, Spin } from 'antd';
 import {
     MenuUnfoldOutlined,
     MenuFoldOutlined,
     UserOutlined,
-    DownloadOutlined,
     AppstoreAddOutlined,
     SolutionOutlined,
     ProjectOutlined
@@ -17,10 +16,13 @@ import './menu.scss';
 function MenuSider(props) {
 
   const [isCollapsed, setIsCollapsed] = useState(true);
-  const { routes } = props;
-  // console.log(routes); 
+  const { routes, location } = props;
+  const menuKeys = ['/profile', '/project', '/education', '/skill'];
+  const selectedMenuKey = menuKeys.find(
+    (key) => location.pathname === key || location.pathname.startsWith(`${key}/`)
+  );
     const toggleCollapsed = () => {
-        setIsCollapsed(!isCollapsed)
+        setIsCollapsed((prev) => !prev);
     }
 
     const { Header, Sider, Content } = Layout;
@@ -28,10 +30,15 @@ function MenuSider(props) {
   
   
     return  (
-      <Layout >
-        <Sider trigger={null} collapsible collapsed={isCollapsed}  style={{backgroundColor:'#202224'}}>
+      <Layout className="app-shell">
+        <Sider trigger={null} collapsible collapsed={isCollapsed} className="menu-sider">
           <div className="logo"><Link to='/'><img src={logo} alt='Logo web' /></Link></div>
-          <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}  style={{backgroundColor:'#202224'}}>
+          <Menu
+            className="menu-nav"
+            theme="dark"
+            mode="inline"
+            selectedKeys={selectedMenuKey ? [selectedMenuKey] : []}
+          >
             <Menu.Item key="/profile" icon={<UserOutlined />}>
               <Link to={'/profile'}>Perfil</Link>
             </Menu.Item>
@@ -46,15 +53,15 @@ function MenuSider(props) {
             </Menu.Item>
           </Menu>
         </Sider>
-        <Layout className="site-layout" >
-          <Header className="site-layout-background" style={{ padding: 0, backgroundColor:'#202224' }}>
+        <Layout className={`site-layout ${isCollapsed ? 'site-layout--collapsed' : 'site-layout--expanded'}`} >
+          <Header className="site-layout-background menu-header">
             {React.createElement(isCollapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
               className: 'trigger',
               onClick: toggleCollapsed,
             })}
           </Header>
-          <Content>
-              {routes ? <LoadRoutes routes={routes} /> : <Spin tip='Cargando' style={{width:'200px'}} />}
+          <Content className="site-content">
+              {routes ? <LoadRoutes routes={routes} /> : <Spin className="menu-loading" tip='Cargando' />}
           </Content>
           
         </Layout>
@@ -67,9 +74,9 @@ function LoadRoutes({ routes }) {
     return (
       
         <Switch>
-            {routes.map((route, index) => (
+            {routes.map((route) => (
                 <Route 
-                    key= {index}
+                    key={route.path}
                     path={route.path}
                     exact={route.exact}
                     component={route.component}

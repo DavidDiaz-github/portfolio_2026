@@ -6,14 +6,13 @@ import {
     MailOutlined,
     UserOutlined
 } from '@ant-design/icons';
-import Particles from 'react-particles-js';
 
 import './Home.scss';
 
 export default function Home() {
     const [isVisibleModal, setIsVisibleModal] = useState(false);
-    const [modalContent, setModalContent] = useState('')
-    console.log('isvisible',isVisibleModal);
+    const [modalContent, setModalContent] = useState('');
+
     const contact = () => {
         setIsVisibleModal(true)
         setModalContent(
@@ -26,101 +25,20 @@ export default function Home() {
     
     return (
       <div className='home' >
-        <Particles params={{
-          particles: {
-            number: {
-              value: 200,
-              density: {
-                enable: true,
-                value_area: 1000
-              }
-            },
-            color: {
-              value: "#fff"
-            },
-            polygon: {
-              nb_sides: 2
-            },
-            shape: {
-              type: "circle",
-              stroke: {
-                width: 1,
-                color: "#000000"
-              },
-              image: {
-                src: "img/github.svg",
-                width: 150,
-                height: 150
-              }
-            },
-            opacity: {
-              value: 0.5,
-              random: true,
-              anim: {
-                enable: true,
-                speed: 0.5,
-                opacity_min: 0.1,
-                sync: false
-              }
-            },
-            size: {
-              value: 1,
-              random: false,
-              anim: {
-                enable: false,
-                speed: 1,
-                size_min: 0.1,
-                sync: true
-              }
-            },
-            line_linked: {
-              enable_auto: true,
-              distance: 200,
-              color: "#fff",
-              opacity: 1,
-              width: 0.3,
-              codensed_mode: {
-                enable: false,
-                rotateX: 600,
-                rotateY: 600
-              }
-            },
-            move: {
-              enable: true,
-              speed: 3,
-              direction: "none",
-              random: false,
-              straight: false,
-              out_mode: "out",
-              bounce: false,
-              attract: {
-                enable: false,
-                rotateX: 600,
-                rotateY: 1200
-              }
-            }
-          },
-          interactivity: {
-            detect_on: "canvas",
-            events: {
-              onClick: {
-                enable: true,
-                mode: "push"
-              },
-              resize: true
-            }
-          },
-          retina_detect: true
-        }} />
+        <div className='home__background' aria-hidden='true'>
+            <span className='home__orb home__orb--one' />
+            <span className='home__orb home__orb--two' />
+            <span className='home__orb home__orb--three' />
+        </div>
         
             <div className='home__card'>
                 <h1>David Díaz</h1>
                 <h2>Programador Web</h2>
                 <Button type='primary' className='btn-contact' onClick={contact}>Contacta</Button>
-                <div classname='home__ul'>
+                <div className='home__ul'>
                     <ul className='ul'>
-                        <li><a href='https://github.com/DavidDiaz-github/' target='_blank'><GithubOutlined /></a></li>
-                        <li><a href='https://www.linkedin.com/in/david-diaz-fueyo/' target='_blank' ><LinkedinOutlined /></a></li>
+                        <li><a href='https://github.com/DavidDiaz-github/' target='_blank' rel="noopener noreferrer"><GithubOutlined /></a></li>
+                        <li><a href='https://www.linkedin.com/in/david-diaz-fueyo/' target='_blank' rel="noopener noreferrer"><LinkedinOutlined /></a></li>
                         <li><a href='mailto:david1_43@hotmail.com'><MailOutlined /></a></li>
                     </ul>
                 </div>
@@ -130,7 +48,7 @@ export default function Home() {
                 title='Contacto'
                 visible={isVisibleModal}
                 footer={null}
-                style={{ textAlign: 'center', fontSize: '23px' }}
+                className='home-modal'
                 onCancel={closed}
             >
                 {modalContent}
@@ -198,7 +116,6 @@ class MyForm extends React.Component {
     ev.preventDefault();
       const form = ev.target;
       const data = new FormData(form);
-      console.log(data);
     const xhr = new XMLHttpRequest();
     xhr.open(form.method, form.action);
     xhr.setRequestHeader("Accept", "application/json");

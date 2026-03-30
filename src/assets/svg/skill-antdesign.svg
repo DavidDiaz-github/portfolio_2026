@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320">
+  <rect width="480" height="320" rx="28" fill="#eff6ff"/>
+  <path d="M240 54l98 58v96l-98 58-98-58v-96z" fill="#1677ff"/>
+  <path d="M240 102l46 27v50l-46 27-46-27v-50z" fill="#ffffff"/>
+  <text x="240" y="290" fill="#0f172a" font-size="34" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700">Ant Design</text>
+</svg>

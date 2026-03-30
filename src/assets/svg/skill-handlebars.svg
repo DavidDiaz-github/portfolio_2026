@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320">
+  <rect width="480" height="320" rx="28" fill="#2d1b14"/>
+  <rect x="92" y="92" width="296" height="136" rx="18" fill="#f97316"/>
+  <text x="240" y="182" fill="#2d1b14" font-size="94" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700">H</text>
+  <text x="240" y="286" fill="#fed7aa" font-size="34" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700">Handlebars</text>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#1f2937"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="720" fill="url(#bg)"/>
+  <rect x="94" y="96" width="1012" height="528" rx="26" fill="#140c24" stroke="#ddd6fe" stroke-width="2"/>
+  <rect x="138" y="142" width="312" height="436" rx="22" fill="#312e81"/>
+  <path d="M294 222l88 56-26 110-124 0-26-110z" fill="#f59e0b"/>
+  <rect x="248" y="388" width="92" height="92" rx="18" fill="#fbbf24"/>
+  <text x="500" y="244" fill="#ffffff" font-size="72" font-family="Arial, sans-serif" font-weight="700">Clash Royale</text>
+  <text x="500" y="318" fill="#e9d5ff" font-size="34" font-family="Arial, sans-serif">Express • Ajax • Handlebars</text>
+  <text x="500" y="416" fill="#f5f3ff" font-size="28" font-family="Arial, sans-serif">Stats de juego, CRUD y gestion de mazos</text>
+  <text x="500" y="458" fill="#f5f3ff" font-size="28" font-family="Arial, sans-serif">con un look inspirado en mobile gaming.</text>
+</svg>

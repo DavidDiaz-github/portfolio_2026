@@ -47,18 +47,18 @@ export default function Education() {
                 <Row gutter={24}>
                     <Col span={4} />
                     <Col span={16}>
-                        <h2 className='title' style={{color:'snow'}}>Certificaciones</h2>
+                        <h2 className='title title--light'>Certificaciones</h2>
                     </Col>
                     <Col span={4} />
                 </Row>
                 <Row gutter={24} className='cards'>
-                    {certificaciones.map(item => (
-                        <Col xl={4} lg={5} md={10} sm={4}  className='card'>
+                    {certificaciones.map((item) => (
+                        <Col xl={4} lg={5} md={10} sm={4} className='card' key={item.title}>
                             <h2>{item.title}</h2>
                             <h4>{item.empresa}</h4>
                             <p>{item.expedido}</p>
                             {item.credential && <p>{item.credential}</p>}
-                            {item.enlace && <a href={item.enlace} target='_blank'>Ver certificación</a>}
+                            {item.enlace && <a href={item.enlace} target='_blank' rel="noopener noreferrer">Ver certificación</a>}
                     </Col>
                     ))}
                 </Row>
@@ -71,8 +71,8 @@ export default function Education() {
                 <Col span={4} />
             </Row>
             <Row gutter={24} className='cards'>
-                {cursos.map(item => (
-                    <Col xl={4} lg={5} md={10} sm={4} className='card'>
+                {cursos.map((item) => (
+                    <Col xl={4} lg={5} md={10} sm={4} className='card' key={item.title}>
                         <h3>{item.title}</h3>
                         <p>{item.description}</p>
                         <p>Fecha : {item.date}</p>

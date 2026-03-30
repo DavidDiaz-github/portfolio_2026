@@ -11,8 +11,8 @@ function App() {
     <>
       <Router>
         <Switch>
-          {routes.map((route, index) => (
-              <RouteWithSubRoutes key={index} {...route} />
+          {routes.map((route) => (
+              <RouteWithSubRoutes key={route.path} {...route} />
             ))}
         </Switch>
       </Router>
@@ -32,5 +32,4 @@ function RouteWithSubRoutes(route) {
 
 
 export default App;
-
 

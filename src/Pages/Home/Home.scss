@@ -1,167 +1,238 @@
-
-//Animacion particles.js
-.home{
-    height: 100%;
-    background-color: black;
-    display: flex;
-    justify-content: center;
+.home {
     align-items: center;
+    background:
+        radial-gradient(circle at top, rgba(18, 163, 184, 0.22), transparent 35%),
+        linear-gradient(145deg, #050816 0%, #0c1425 45%, #05070d 100%);
+    box-sizing: border-box;
+    display: flex;
     font-family: 'Righteous', cursive;
-    &__card{
-        
+    justify-content: center;
+    height: 100%;
+    overflow: hidden;
+    padding: 24px;
+    position: relative;
+    width: 100%;
+
+    &__background {
+        inset: 0;
         position: absolute;
-        
-        h1{
-            font-size: 5em;
-            font-weight: 900;
-            text-transform: uppercase;
-            color: #fff;
-            text-align: center;
-            margin-bottom: 0;
+    }
+
+    &__orb {
+        animation: float 14s ease-in-out infinite;
+        border-radius: 999px;
+        filter: blur(12px);
+        opacity: 0.65;
+        position: absolute;
+
+        &--one {
+            background: rgba(18, 163, 184, 0.28);
+            height: 260px;
+            left: 8%;
+            top: 10%;
+            width: 260px;
         }
-        h2{
-            font-size: 3em;
-            font-weight: 900;
-            text-transform: uppercase;
+
+        &--two {
+            animation-delay: -4s;
+            background: rgba(255, 255, 255, 0.12);
+            height: 180px;
+            right: 12%;
+            top: 20%;
+            width: 180px;
+        }
+
+        &--three {
+            animation-delay: -8s;
+            background: rgba(25, 106, 119, 0.28);
+            bottom: 8%;
+            height: 320px;
+            right: 18%;
+            width: 320px;
+        }
+    }
+
+    &__card {
+        align-items: center;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        max-width: 720px;
+        position: relative;
+        text-align: center;
+        width: 100%;
+        z-index: 1;
+
+        h1 {
             color: #fff;
+            font-size: clamp(3rem, 7vw, 5.4rem);
+            font-weight: 900;
+            letter-spacing: 0.04em;
+            margin-bottom: 0.2em;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            color: rgba(255, 255, 255, 0.82);
+            font-size: clamp(1.4rem, 3vw, 2.5rem);
+            font-weight: 700;
+            margin-bottom: 1.2rem;
+            text-transform: uppercase;
         }
     }
 }
 
-#tsparticles{
-    width: 100%;
-    height: 100%;
-    background-color: #111111;
-    position: relative;
-    
-    
+@keyframes float {
+    0%,
+    100% {
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate3d(0, -22px, 0) scale(1.06);
+    }
 }
 
-.home__ul{
-    ul{
+.home__ul {
+    width: 100%;
+
+    ul {
         display: flex;
         flex-direction: row;
+        justify-content: center;
         list-style-type: none;
-        li{
-           list-style-type: none; 
-        }
     }
 }
 
-.ul{
-    list-style: none;
+.ul {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    margin: 15px;
+    gap: 0.4rem;
+    justify-content: center;
+    list-style: none;
+    margin: 18px 0 0;
+    padding-inline-start: 0;
 
-    svg{
-        width: 2em;
-        height: 2em;
-        margin: 10px;
+    li {
+        list-style-type: none;
     }
 
-    
+    a {
+        align-items: center;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        border-radius: 999px;
+        display: inline-flex;
+        justify-content: center;
+        transition: transform 0.2s ease, background-color 0.2s ease;
+    }
+
+    a:hover {
+        background: rgba(18, 163, 184, 0.2);
+        transform: translateY(-2px);
+    }
+
+    svg {
+        height: 2em;
+        margin: 10px;
+        width: 2em;
+    }
 }
 
-.btn-contact{
-    display: flex;
+.btn-contact {
     align-items: center;
-    justify-content: center;
-    width: 100%;
     background-color: #12A3B8;
     border: 1px solid #343B3F;
+    display: flex;
     font-size: 1.2em;
+    justify-content: center;
+    max-width: 320px;
+    width: 100%;
 }
-.btn-contact:hover{
+
+.btn-contact:hover {
     background-color: #196a77;
     border: 1px solid #343B3F;
 }
 
-
-.modal{
-    
-    TextArea{
+.modal {
+    TextArea {
         margin-bottom: 15px;
     }
 
-    .anticon{
+    .anticon {
         color: rgba(0, 0, 0, 0.55);
     }
 }
-.ant-modal-title{
+
+.ant-modal-title {
     font-size: 28px;
     font-weight: bold;
 }
 
-.ant-col{
+.home-modal {
+    font-size: 23px;
+    text-align: center;
+}
+
+.ant-col {
     margin-top: 15px;
 }
 
-.btn-send{
-    display: flex;
+.btn-send {
     align-items: center;
-    justify-content: center;
-    width: 100%;
     background-color: #12A3B8;
     border: 1px solid #343B3F;
-    font-size: 1.3em;
     color: #fff;
+    display: flex;
+    font-size: 1.3em;
+    justify-content: center;
+    width: 100%;
 }
-.btn-send:hover{
+
+.btn-send:hover {
     background-color: #196a77;
     border: 1px solid #343B3F;
 }
 
-.ant-modal-close-x{
-    span{
-        svg{
+.ant-modal-close-x {
+    span {
+        svg {
             color: black;
         }
     }
 }
 
-@media(max-width: 420px){
-    .home{
-        width: 100%;
+@media(max-width: 420px) {
+    .home {
         height: 100%;
-        
-        &__card{
-            h1{
-                font-size: 2em;
-            }
-            h2{
-                display: flex;
-                font-size: 1.5em;
-                justify-content: center;
-                margin-bottom: 50%;
+        padding: 20px 16px;
+
+        &__card {
+            h2 {
+                margin-bottom: 1rem;
             }
         }
-        
-        
-        
-        
+
+        &__orb--one {
+            height: 180px;
+            width: 180px;
+        }
+
+        &__orb--three {
+            height: 220px;
+            width: 220px;
+        }
     }
-    .tsparticles-canvas-el{
-        height: 100%;
-    }
-    #tsparticles{
-            // object-fit: scale-down;
-            height: 812px;
-    }
-    ul{
-        padding-inline-start: 0px;
-        // padding: 0px;
-    }
-    
 }
 
-@media(min-width: 1920px){
-    .home{
-        height: 1600px;
+@media(min-width: 1920px) {
+    .home {
+        min-height: 100%;
     }
-    .ant-modal-content{
-        width: 150%;
+
+    .ant-modal-content {
         height: 200%;
+        width: 150%;
     }
 }
