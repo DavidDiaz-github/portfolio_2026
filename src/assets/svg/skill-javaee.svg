@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Java EE">
+  <defs>
+    <linearGradient id="g-javaee" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="40" fill="url(#g-javaee)"/>
+  <rect x="52" y="68" width="152" height="120" rx="22" fill="rgba(255,255,255,0.08)"/>
+  <path d="M86 156c0-24 16-40 39-40 15 0 27 6 35 17l-14 9c-5-7-12-10-21-10-13 0-22 9-22 24 0 15 10 24 22 24 10 0 17-4 23-11l13 10c-9 12-22 18-38 18-25 0-37-14-37-41z" fill="#fff"/>
+  <text x="128" y="102" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" fill="#c4b5fd">JAVA EE</text>
+</svg>

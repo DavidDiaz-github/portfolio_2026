@@ -9,6 +9,19 @@ import mysql from '../assets/png/mysql.png';
 import html from '../assets/png/html.png';
 import css from '../assets/png/css.png';
 import sass from '../assets/png/sass.png';
+import java from '../assets/svg/skill-java.svg';
+import springBoot from '../assets/svg/skill-spring-boot.svg';
+import vue from '../assets/svg/skill-vue.svg';
+import vuex from '../assets/svg/skill-vuex.svg';
+import angular from '../assets/svg/skill-angular.svg';
+import javaee from '../assets/svg/skill-javaee.svg';
+import hibernate from '../assets/svg/skill-hibernate.svg';
+import git from '../assets/svg/skill-git.svg';
+import postman from '../assets/svg/skill-postman.svg';
+import jmeter from '../assets/svg/skill-jmeter.svg';
+import linux from '../assets/svg/skill-linux.svg';
+import tomcat from '../assets/svg/skill-tomcat.svg';
+import h2 from '../assets/svg/skill-h2.svg';
 import hooks from '../assets/svg/skill-hooks.svg';
 import antDesign from '../assets/svg/skill-antdesign.svg';
 import handlebars from '../assets/svg/skill-handlebars.svg';
@@ -16,28 +29,28 @@ import apis from '../assets/svg/skill-apis.svg';
 
 export const skills = [
   {
-    img: 'https://b.marfeelcache.com/statics/i/ps/www.muylinux.com/wp-content/uploads/2019/01/mongodb.png?width=1200&enable=upscale',
+    img: mongo,
     title: 'MongoDB',
     png: mongo,
     description:
       'MongoDB es un sistema de base de datos NoSQL, orientado a documentos y de codigo abierto. En lugar de guardar los datos en tablas, tal y como se hace en las bases de datos relacionales, MongoDB guarda estructuras de datos BSON(una especificacion similar a JSON) con un esquema dinamico, haciendo que la integracion de los datos en ciertas aplicaciones sea mas facil y rapida.'
   },
   {
-    img: 'https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-Lgyno4NC7rhy49BAEjN%2F-Lh14lb3LH4C886qWxYA%2F-Lh1DZeIUQennGd9RiHe%2FScreen%20Shot%202019-06-10%20at%2011.30.20%20AM.png?alt=media&token=784b79f6-81b5-4308-97a2-155afb9d496f',
+    img: express,
     title: 'Express',
     png: express,
     description:
       'Express es una infraestructura de aplicaciones web Node.js minima y flexible que proporciona un conjunto solido de caracteristicas para las aplicaciones web y moviles.'
   },
   {
-    img: 'https://res.cloudinary.com/practicaldev/image/fetch/s--54ca_F2q--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/i/1wwdyw5de8avrdkgtz5n.png',
+    img: react,
     title: 'React Js',
     png: react,
     description:
       'React es una biblioteca Javascript de codigo abierto disenada para crear interfaces de usuario con el objetivo de facilitar el desarrollo de aplicaciones en una sola pagina. Es mantenido por Facebook y la comunidad de software libre.'
   },
   {
-    img: 'https://www.silversites.es/wp-content/uploads/2019/06/node-js.jpg',
+    img: node,
     title: 'Node.js',
     png: node,
     description:
@@ -51,46 +64,137 @@ export const skills = [
       'Los Hooks son una nueva incorporacion en React 16.8. Te permiten usar estado y otras caracteristicas de React sin escribir una clase.'
   },
   {
-    img: 'https://d8285fmxt3duy.cloudfront.net/public/articulos/img/java-script1.jpg',
+    img: js,
     title: 'JavaScript',
     png: js,
     description:
       'JavaScript (abreviado comunmente JS) es un lenguaje de programacion interpretado, dialecto del estandar ECMAScript. Se define como orientado a objetos, basado en prototipos, imperativo, debilmente tipado y dinamico.'
   },
   {
-    img: 'https://i.blogs.es/46244e/python/1366_521.jpg',
+    img: python,
     title: 'Python',
     png: python,
     description:
       'Python es un lenguaje de programacion interpretado cuya filosofia hace hincapie en la legibilidad de su codigo. Se trata de un lenguaje de programacion multiparadigma, ya que soporta orientacion a objetos, programacion imperativa y, en menor medida, programacion funcional. Es un lenguaje interpretado, dinamico y multiplataforma.'
   },
   {
-    img: 'https://disenowebakus.net/imagenes/articulos/html5.jpg',
+    img: html,
     title: 'Html 5',
     png: html,
     description:
       'HTML 5 (HyperText Markup Language, version 5) es la quinta revision importante del lenguaje basico de la World Wide Web, HTML. HTML5 especifica dos variantes de sintaxis para HTML: una clasica, HTML (text/html), conocida como HTML5, y una variante XHTML conocida como sintaxis XHTML 5 que debera servirse con sintaxis XML (application/xhtml+xml).'
   },
   {
-    img: 'https://www.solucionex.com/sites/default/files/posts/imagen/css_blog.png',
+    img: css,
     title: 'CSS',
     png: css,
     description:
       'CSS son las siglas de Cascading Style Sheets (hojas de estilo en cascada). CSS es un lenguaje para la composicion y estructuracion de paginas web (HTML o XML).'
   },
   {
-    img: 'https://el.javier.pro/wp-content/uploads/2016/10/sass-logo-wall.jpg',
+    img: sass,
     title: 'SASS',
     png: sass,
     description:
       'Sass es un metalenguaje de Hojas de Estilo en Cascada (CSS). Es un lenguaje de script que es traducido a CSS. SassScript es el lenguaje de script en si mismo.'
   },
   {
-    img: 'https://serv3.raiolanetworks.es/blog/wp-content/uploads/bootstrap-social-share.png',
+    img: bootstrap,
     title: 'Bootstrap',
     png: bootstrap,
     description:
       'Bootstrap es un framework front-end utilizado para desarrollar aplicaciones web y sitios mobile first.'
+  },
+  {
+    img: java,
+    png: java,
+    title: 'Java',
+    description:
+      'Java es un lenguaje de programacion orientado a objetos, ampliamente utilizado en entornos empresariales por su robustez, portabilidad y ecosistema de herramientas.',
+  },
+  {
+    img: springBoot,
+    png: springBoot,
+    title: 'Spring Boot',
+    description:
+      'Spring Boot simplifica la creacion de aplicaciones Java listas para produccion, con configuracion minima y un ecosistema muy extendido para APIs y microservicios.',
+  },
+  {
+    img: vue,
+    png: vue,
+    title: 'Vue.js',
+    description:
+      'Vue.js es un framework progresivo de JavaScript para construir interfaces de usuario de forma sencilla, flexible y mantenible.',
+  },
+  {
+    img: vuex,
+    png: vuex,
+    title: 'Vuex',
+    description:
+      'Vuex es la libreria de gestion centralizada de estado para aplicaciones Vue, util cuando la aplicacion crece y necesita compartir informacion entre componentes.',
+  },
+  {
+    img: angular,
+    png: angular,
+    title: 'Angular 9',
+    description:
+      'Angular es un framework para aplicaciones web de gran escala, estructurado y orientado a proyectos con fuerte arquitectura de frontend.',
+  },
+  {
+    img: javaee,
+    png: javaee,
+    title: 'Java EE',
+    description:
+      'Java EE agrupa especificaciones y APIs para desarrollar aplicaciones empresariales Java, especialmente en arquitecturas de servicios y backend corporativo.',
+  },
+  {
+    img: hibernate,
+    png: hibernate,
+    title: 'Hibernate',
+    description:
+      'Hibernate es una solucion ORM que facilita el mapeo entre objetos Java y bases de datos relacionales, reduciendo trabajo repetitivo en persistencia.',
+  },
+  {
+    img: git,
+    png: git,
+    title: 'Git',
+    description:
+      'Git es el sistema de control de versiones distribuido que permite gestionar ramas, historiales y trabajo colaborativo de forma fiable.',
+  },
+  {
+    img: postman,
+    png: postman,
+    title: 'Postman',
+    description:
+      'Postman es una herramienta para probar, documentar y validar APIs REST de forma rapida durante desarrollo y mantenimiento.',
+  },
+  {
+    img: jmeter,
+    png: jmeter,
+    title: 'JMeter',
+    description:
+      'JMeter permite realizar pruebas de carga y rendimiento sobre aplicaciones y APIs para comprobar su comportamiento bajo distintos niveles de uso.',
+  },
+  {
+    img: linux,
+    png: linux,
+    title: 'Linux',
+    description:
+      'Linux es un sistema operativo ampliamente usado en servidores, despliegues y automatizacion, muy habitual en entornos profesionales.',
+  },
+  {
+    img: tomcat,
+    png: tomcat,
+    title: 'Apache Tomcat',
+    description:
+      'Apache Tomcat es un contenedor web muy extendido para desplegar aplicaciones Java y gestionar entornos de ejecucion web.',
+  },
+  {
+    img: h2,
+    png: h2,
+    title: 'H2',
+    description:
+      'H2 es una base de datos relacional ligera, muy util en entornos de desarrollo, pruebas y prototipado de aplicaciones Java.',
   },
   {
     img: antDesign,
@@ -107,7 +211,7 @@ export const skills = [
       'Handlebars.js es un popular motor de plantillas que es potente, facil de usar y tiene una gran comunidad. Se basa en el lenguaje de plantillas de Moustache, pero lo mejora de varias formas importantes. Con Handlebars, puede separar la generacion de HTML del resto de su JavaScript y escribir codigo mas limpio.'
   },
   {
-    img: 'https://blog.trescomatres.com/wp-content/uploads/2017/03/banner-mysql.jpg',
+    img: mysql,
     title: 'MySql',
     png: mysql,
     description:

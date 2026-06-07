@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Angular">
+  <defs>
+    <linearGradient id="g-angular" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="40" fill="url(#g-angular)"/>
+  <path d="M128 56 70 76 81 161 128 200 175 161 186 76z" fill="#fff"/>
+  <path d="M128 86 96 156h20l12-28 12 28h20z" fill="#ef4444"/>
+  <text x="128" y="226" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" fill="#fff">ANGULAR 9</text>
+</svg>
