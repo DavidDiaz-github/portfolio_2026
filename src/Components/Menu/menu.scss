@@ -103,8 +103,18 @@
   border-bottom: 1px solid rgba(31, 41, 55, 0.08);
   display: flex;
   flex: 0 0 64px;
-  padding: 0;
-  z-index: 50;
+  padding: 0 12px;
+  position: relative;
+  transition: padding-left 0.2s ease;
+  z-index: 150;
+}
+
+.menu-header--collapsed {
+  padding-left: 12px;
+}
+
+.menu-header--expanded {
+  padding-left: 132px;
 }
 
 .trigger {
@@ -114,7 +124,7 @@
   line-height: 1;
   padding: 12px;
   transition: color 0.3s ease;
-  margin-left: 8px;
+  margin-left: 0;
 
   svg:hover {
     color: var(--shell-accent);
@@ -163,5 +173,10 @@
     margin-left: 8px;
     margin-right: 8px;
     width: calc(100% - 16px);
+  }
+
+  .menu-header--expanded,
+  .menu-header--collapsed {
+    padding-left: 12px;
   }
 }

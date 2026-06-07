@@ -54,7 +54,7 @@ function MenuSider(props) {
           </Menu>
         </Sider>
         <Layout className={`site-layout ${isCollapsed ? 'site-layout--collapsed' : 'site-layout--expanded'}`} >
-          <Header className="site-layout-background menu-header">
+          <Header className={`site-layout-background menu-header ${isCollapsed ? 'menu-header--collapsed' : 'menu-header--expanded'}`}>
             {React.createElement(isCollapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
               className: 'trigger',
               onClick: toggleCollapsed,
