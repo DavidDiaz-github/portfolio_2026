@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import cvFile from '../../assets/pdf/cv-full-stack.pdf';
+import cvFile from '../../assets/pdf/David_Curriculum_2026.pdf';
 import { legacyProjects } from '../../data/legacyProjects';
 import './Evolution.scss';
 
@@ -25,9 +25,9 @@ const earlyMilestones = [
 
 const currentMilestones = [
     {
-        title: 'Backend Java / Full Stack',
+        title: 'Full Stack JavaScript con backend Java',
         description:
-            'En mi etapa actual trabajo con Java, Spring Boot, APIs REST, SQL y frontend con Vue.js y React, con una orientación mucho más corporativa.',
+            'En mi etapa actual trabajo con frontend en React y Vue.js, y backend con Java, Spring Boot, APIs REST y SQL, con una orientación mucho más corporativa.',
     },
     {
         title: 'Entorno productivo',
@@ -46,10 +46,10 @@ export default function Evolution() {
         <div className="evolution">
             <section className="evolution__hero">
                 <span className="evolution__eyebrow">Trayectoria</span>
-                <h1>De mis primeros pasos como junior a backend Java</h1>
+                <h1>De mis primeros pasos como junior a Full Stack JavaScript</h1>
                 <p>
                     Mantengo visible la etapa junior para no perder identidad ni contexto, pero la combino con mi perfil
-                    actual en backend Java, Spring Boot, APIs REST y trabajo en entornos corporativos.
+                    actual como Full Stack JavaScript con experiencia en backend Java, Spring Boot, APIs REST y trabajo en entornos corporativos.
                 </p>
                 <div className="evolution__actions">
                     <Link className="evolution__button" to="/profile">

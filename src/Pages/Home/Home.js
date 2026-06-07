@@ -34,8 +34,8 @@ export default function Home() {
         
             <div className='home__card'>
                 <h1>David Díaz</h1>
-                <h2>Desarrollador Backend Java / Full Stack</h2>
-                <p className='home__subtitle'>Trayectoria previa en MERN, React y proyectos personales, con foco actual en Java, Spring Boot y APIs REST.</p>
+                <h2>Desarrollador Full Stack JavaScript</h2>
+                <p className='home__subtitle'>Experiencia en frontend y backend con React, Vue.js, APIs REST, SQL y Spring Boot, manteniendo la base construida en MERN y proyectos personales.</p>
                 <Button type='primary' className='btn-contact' onClick={contact}>Contacta</Button>
                 <Link className='home__evolution-link' to='/evolution'>Ver evolución profesional</Link>
                 <div className='home__ul'>
