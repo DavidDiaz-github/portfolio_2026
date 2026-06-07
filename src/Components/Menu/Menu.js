@@ -7,7 +7,8 @@ import {
     UserOutlined,
     AppstoreAddOutlined,
     SolutionOutlined,
-    ProjectOutlined
+    ProjectOutlined,
+    HistoryOutlined
 } from '@ant-design/icons';
 import logo from '../../assets/png/logo-white.png';
 
@@ -17,7 +18,7 @@ function MenuSider(props) {
 
   const [isCollapsed, setIsCollapsed] = useState(true);
   const { routes, location } = props;
-  const menuKeys = ['/profile', '/project', '/education', '/skill'];
+  const menuKeys = ['/profile', '/project', '/evolution', '/education', '/skill'];
   const selectedMenuKey = menuKeys.find(
     (key) => location.pathname === key || location.pathname.startsWith(`${key}/`)
   );
@@ -44,6 +45,9 @@ function MenuSider(props) {
             </Menu.Item>
             <Menu.Item key="/project" icon={<ProjectOutlined />}>
               <Link to={'/project'}>Proyectos</Link>
+            </Menu.Item>
+            <Menu.Item key="/evolution" icon={<HistoryOutlined />}>
+              <Link to={'/evolution'}>Evolución</Link>
             </Menu.Item>
             <Menu.Item key="/education" icon={<SolutionOutlined />}>
               <Link to={'/education'}>Estudios</Link>

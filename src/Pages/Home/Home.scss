@@ -82,6 +82,14 @@
     }
 }
 
+.home__subtitle {
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0 auto 1.3rem;
+    max-width: 56ch;
+}
+
 @keyframes float {
     0%,
     100% {
@@ -155,6 +163,20 @@
     border: 1px solid #343B3F;
 }
 
+.home__evolution-link {
+    color: rgba(255, 255, 255, 0.88);
+    display: inline-flex;
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-top: 12px;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.home__evolution-link:hover {
+    color: #12a3b8;
+}
+
 .modal {
     TextArea {
         margin-bottom: 15px;
@@ -212,6 +234,11 @@
             h2 {
                 margin-bottom: 1rem;
             }
+        }
+
+        &__subtitle {
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
         }
 
         &__orb--one {

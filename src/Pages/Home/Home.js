@@ -1,5 +1,6 @@
 import { Button, Modal, Input, Row, Col } from 'antd';
 import React,{ useState } from 'react';
+import { Link } from 'react-router-dom';
 import {
     GithubOutlined,
     LinkedinOutlined,
@@ -33,8 +34,10 @@ export default function Home() {
         
             <div className='home__card'>
                 <h1>David Díaz</h1>
-                <h2>Programador Web</h2>
+                <h2>Desarrollador Backend Java / Full Stack</h2>
+                <p className='home__subtitle'>Trayectoria previa en MERN, React y proyectos personales, con foco actual en Java, Spring Boot y APIs REST.</p>
                 <Button type='primary' className='btn-contact' onClick={contact}>Contacta</Button>
+                <Link className='home__evolution-link' to='/evolution'>Ver evolución profesional</Link>
                 <div className='home__ul'>
                     <ul className='ul'>
                         <li><a href='https://github.com/DavidDiaz-github/' target='_blank' rel="noopener noreferrer"><GithubOutlined /></a></li>

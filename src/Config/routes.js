@@ -11,6 +11,7 @@ import Download from '../Pages/Download/Download';
 import Education from '../Pages/Education/Education';
 import Project from '../Pages/Project/Project';
 import Skill from '../Pages/Skill/Skill';
+import Evolution from '../Pages/Evolution/Evolution';
 
 const routes = [
     {
@@ -29,6 +30,10 @@ const routes = [
             }, {
                 path: "/project",
                 component: Project,
+                exact: true
+            }, {
+                path: "/evolution",
+                component: Evolution,
                 exact: true
             }, {
                 path: "/education",

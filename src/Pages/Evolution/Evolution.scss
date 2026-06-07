@@ -1,0 +1,246 @@
+.evolution {
+    background:
+        radial-gradient(circle at top right, rgba(18, 163, 184, 0.18), transparent 28%),
+        linear-gradient(180deg, #c9c9cf 0%, #b7bbc3 100%);
+    font-family: 'Righteous', cursive;
+    min-height: calc(100vh - 64px);
+    padding: 30px 24px 42px;
+}
+
+.evolution__hero,
+.evolution__section {
+    margin: 0 auto 30px;
+    max-width: 1280px;
+}
+
+.evolution__hero {
+    background: rgba(8, 15, 28, 0.82);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 28px;
+    color: #f8fafc;
+    padding: 30px;
+}
+
+.evolution__eyebrow {
+    color: #12a3b8;
+    display: inline-flex;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    margin-bottom: 14px;
+    text-transform: uppercase;
+}
+
+.evolution__hero h1 {
+    font-size: clamp(2.2rem, 5vw, 4.2rem);
+    line-height: 1.05;
+    margin: 0 0 16px;
+    max-width: 14ch;
+    text-transform: uppercase;
+}
+
+.evolution__hero p {
+    color: rgba(248, 250, 252, 0.82);
+    line-height: 1.7;
+    margin: 0;
+    max-width: 72ch;
+}
+
+.evolution__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 22px;
+}
+
+.evolution__button {
+    align-items: center;
+    background: #12a3b8;
+    border-radius: 999px;
+    color: #fff;
+    display: inline-flex;
+    font-weight: 700;
+    justify-content: center;
+    padding: 12px 18px;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.evolution__button:hover {
+    background: #0f7f90;
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+.evolution__button--ghost {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.evolution__button--ghost:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.evolution__section h2 {
+    color: #0f172a;
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+    margin: 0 0 18px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.evolution__section--accent {
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: 28px;
+    padding: 24px;
+}
+
+.evolution__grid {
+    display: grid;
+    gap: 18px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.evolution-card {
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(15, 23, 42, 0.12);
+    border-radius: 24px;
+    box-shadow: 0 18px 32px rgba(15, 23, 42, 0.12);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+
+.evolution-card--dark {
+    background: rgba(8, 15, 28, 0.88);
+    color: #f8fafc;
+}
+
+.evolution-card__badge {
+    align-self: flex-start;
+    background: rgba(18, 163, 184, 0.12);
+    border-radius: 999px;
+    color: #0b7285;
+    display: inline-flex;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    padding: 7px 12px;
+    text-transform: uppercase;
+}
+
+.evolution-card__badge--dark {
+    background: rgba(255, 255, 255, 0.12);
+    color: #7de3f1;
+}
+
+.evolution-card h3 {
+    font-size: 1.15rem;
+    margin: 0;
+}
+
+.evolution-card p {
+    line-height: 1.6;
+    margin: 0;
+}
+
+.evolution__project-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.evolution-project {
+    background: rgba(17, 24, 39, 0.94);
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 18px 32px rgba(15, 23, 42, 0.16);
+}
+
+.evolution-project img {
+    aspect-ratio: 16 / 10;
+    display: block;
+    object-fit: cover;
+    width: 100%;
+}
+
+.evolution-project__body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 18px;
+}
+
+.evolution-project__body h3 {
+    color: #fff;
+    font-size: 1.15rem;
+    margin: 0;
+}
+
+.evolution-project__body p {
+    color: rgba(255, 255, 255, 0.82);
+    line-height: 1.55;
+    margin: 0;
+}
+
+.evolution-project__body a {
+    align-self: flex-start;
+    background: #f8fafc;
+    border-radius: 999px;
+    color: #0f172a;
+    display: inline-flex;
+    font-weight: 700;
+    padding: 10px 16px;
+    text-decoration: none;
+}
+
+.evolution-project__body a:hover {
+    background: #12a3b8;
+    color: #fff;
+}
+
+@media (max-width: 1024px) {
+    .evolution {
+        padding: 24px 18px 36px;
+    }
+
+    .evolution__hero {
+        padding: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .evolution {
+        padding: 20px 14px 30px;
+    }
+
+    .evolution__hero,
+    .evolution__section--accent {
+        border-radius: 22px;
+    }
+
+    .evolution__hero h1 {
+        max-width: none;
+    }
+
+    .evolution__project-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .evolution {
+        padding: 18px 12px 26px;
+    }
+
+    .evolution__hero,
+    .evolution__section--accent {
+        padding: 18px;
+    }
+
+    .evolution-card,
+    .evolution-project {
+        border-radius: 18px;
+    }
+}
