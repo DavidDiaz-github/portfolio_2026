@@ -1,0 +1,130 @@
+.download {
+    background:
+        radial-gradient(circle at top left, rgba(18, 163, 184, 0.16), transparent 28%),
+        linear-gradient(180deg, #c9c9cf 0%, #b7bbc3 100%);
+    font-family: 'Righteous', cursive;
+    min-height: calc(100vh - 64px);
+    padding: 30px 24px 42px;
+}
+
+.download__hero,
+.download__notes {
+    margin: 0 auto;
+    max-width: 1280px;
+}
+
+.download__hero {
+    background: rgba(8, 15, 28, 0.88);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 28px;
+    color: #f8fafc;
+    padding: 32px;
+}
+
+.download__eyebrow {
+    align-items: center;
+    color: #12a3b8;
+    display: inline-flex;
+    gap: 8px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    margin-bottom: 14px;
+    text-transform: uppercase;
+}
+
+.download__hero h1 {
+    font-size: clamp(2.2rem, 5vw, 4.2rem);
+    line-height: 1.05;
+    margin: 0 0 16px;
+    text-transform: uppercase;
+}
+
+.download__hero p {
+    color: rgba(248, 250, 252, 0.82);
+    line-height: 1.7;
+    margin: 0;
+    max-width: 68ch;
+}
+
+.download__button {
+    align-items: center;
+    background: #12a3b8;
+    border-radius: 999px;
+    color: #fff;
+    display: inline-flex;
+    gap: 10px;
+    font-weight: 700;
+    margin-top: 22px;
+    padding: 12px 18px;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.download__button:hover {
+    background: #0f7f90;
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+.download__notes {
+    display: grid;
+    gap: 18px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    margin-top: 22px;
+}
+
+.download-card {
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(15, 23, 42, 0.12);
+    border-radius: 24px;
+    box-shadow: 0 18px 32px rgba(15, 23, 42, 0.12);
+    padding: 22px;
+}
+
+.download-card h2 {
+    color: #0f172a;
+    font-size: 1.15rem;
+    margin: 0 0 10px;
+}
+
+.download-card p {
+    color: rgba(15, 23, 42, 0.84);
+    line-height: 1.6;
+    margin: 0;
+}
+
+@media (max-width: 1024px) {
+    .download {
+        padding: 24px 18px 36px;
+    }
+
+    .download__hero {
+        padding: 26px;
+    }
+}
+
+@media (max-width: 768px) {
+    .download {
+        padding: 20px 14px 30px;
+    }
+
+    .download__hero,
+    .download-card {
+        border-radius: 22px;
+    }
+
+    .download__notes {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .download {
+        padding: 18px 12px 26px;
+    }
+
+    .download__hero {
+        padding: 18px;
+    }
+}
