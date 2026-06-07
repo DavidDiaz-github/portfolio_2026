@@ -13,9 +13,7 @@ import java from '../assets/svg/skill-java.svg';
 import springBoot from '../assets/svg/skill-spring-boot.svg';
 import vue from '../assets/svg/skill-vue.svg';
 import vuex from '../assets/svg/skill-vuex.svg';
-import angular from '../assets/svg/skill-angular.svg';
 import javaee from '../assets/svg/skill-javaee.svg';
-import hibernate from '../assets/svg/skill-hibernate.svg';
 import git from '../assets/svg/skill-git.svg';
 import postman from '../assets/svg/skill-postman.svg';
 import jmeter from '../assets/svg/skill-jmeter.svg';
@@ -134,25 +132,11 @@ export const skills = [
       'Vuex es la libreria de gestion centralizada de estado para aplicaciones Vue, util cuando la aplicacion crece y necesita compartir informacion entre componentes.',
   },
   {
-    img: angular,
-    png: angular,
-    title: 'Angular 9',
-    description:
-      'Angular es un framework para aplicaciones web de gran escala, estructurado y orientado a proyectos con fuerte arquitectura de frontend.',
-  },
-  {
     img: javaee,
     png: javaee,
     title: 'Java EE',
     description:
       'Java EE agrupa especificaciones y APIs para desarrollar aplicaciones empresariales Java, especialmente en arquitecturas de servicios y backend corporativo.',
-  },
-  {
-    img: hibernate,
-    png: hibernate,
-    title: 'Hibernate',
-    description:
-      'Hibernate es una solucion ORM que facilita el mapeo entre objetos Java y bases de datos relacionales, reduciendo trabajo repetitivo en persistencia.',
   },
   {
     img: git,
