@@ -110,26 +110,15 @@
 .trigger {
   color: var(--shell-text);
   cursor: pointer;
-  position: fixed;
   font-size: 20px;
   line-height: 1;
   padding: 12px;
   transition: color 0.3s ease;
-  z-index: 220;
+  margin-left: 8px;
 
   svg:hover {
     color: var(--shell-accent);
   }
-}
-
-.trigger--collapsed {
-  left: 68px;
-  top: 16px;
-}
-
-.trigger--expanded {
-  left: 188px;
-  top: 16px;
 }
 
 .site-layout-background {
@@ -174,10 +163,5 @@
     margin-left: 8px;
     margin-right: 8px;
     width: calc(100% - 16px);
-  }
-
-  .trigger--collapsed,
-  .trigger--expanded {
-    left: 68px;
   }
 }

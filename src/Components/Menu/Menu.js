@@ -32,10 +32,6 @@ function MenuSider(props) {
     return  (
       <Layout className="app-shell">
         <Sider trigger={null} collapsible collapsed={isCollapsed} className="menu-sider">
-          {React.createElement(isCollapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
-            className: `trigger ${isCollapsed ? 'trigger--collapsed' : 'trigger--expanded'}`,
-            onClick: toggleCollapsed,
-          })}
           <div className="logo"><Link to='/'><img src={logo} alt='Logo web' /></Link></div>
           <Menu
             className="menu-nav"
@@ -59,6 +55,10 @@ function MenuSider(props) {
         </Sider>
         <Layout className={`site-layout ${isCollapsed ? 'site-layout--collapsed' : 'site-layout--expanded'}`} >
           <Header className="site-layout-background menu-header">
+            {React.createElement(isCollapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
+              className: 'trigger',
+              onClick: toggleCollapsed,
+            })}
           </Header>
           <Content className="site-content">
               {routes ? <LoadRoutes routes={routes} /> : <Spin className="menu-loading" tip='Cargando' />}
