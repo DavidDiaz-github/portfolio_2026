@@ -3,6 +3,8 @@
   --shell-panel: #111111;
   --shell-text: #f5f5f5;
   --shell-accent: #12a3b8;
+  --sider-expanded-width: 200px;
+  --sider-collapsed-width: 80px;
   background: var(--shell-bg);
   height: 100vh;
   overflow: hidden;
@@ -16,6 +18,17 @@
   position: fixed;
   top: 0;
   z-index: 100;
+  width: var(--sider-expanded-width) !important;
+  flex: 0 0 var(--sider-expanded-width) !important;
+  max-width: var(--sider-expanded-width) !important;
+  min-width: var(--sider-expanded-width) !important;
+
+  &.ant-layout-sider-collapsed {
+    width: var(--sider-collapsed-width) !important;
+    flex: 0 0 var(--sider-collapsed-width) !important;
+    max-width: var(--sider-collapsed-width) !important;
+    min-width: var(--sider-collapsed-width) !important;
+  }
 
   .ant-layout-sider-children {
     display: flex;
@@ -90,11 +103,11 @@
 }
 
 .site-layout--expanded {
-  margin-left: 200px;
+  margin-left: var(--sider-expanded-width);
 }
 
 .site-layout--collapsed {
-  margin-left: 80px;
+  margin-left: var(--sider-collapsed-width);
 }
 
 .menu-header {
@@ -150,13 +163,21 @@
 }
 
 @media (max-width: 768px) {
+  .app-shell {
+    --sider-expanded-width: 160px;
+    --sider-collapsed-width: 64px;
+  }
+
   .menu-sider {
     position: fixed;
   }
 
-  .site-layout--expanded,
+  .site-layout--expanded {
+    margin-left: var(--sider-expanded-width);
+  }
+
   .site-layout--collapsed {
-    margin-left: 80px;
+    margin-left: var(--sider-collapsed-width);
   }
 
   .logo {
@@ -178,5 +199,20 @@
   .menu-header--expanded,
   .menu-header--collapsed {
     padding-left: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-shell {
+    --sider-expanded-width: 140px;
+    --sider-collapsed-width: 56px;
+  }
+
+  .menu-nav .ant-menu-item {
+    font-size: 13px;
+  }
+
+  .logo img {
+    max-width: 78px;
   }
 }

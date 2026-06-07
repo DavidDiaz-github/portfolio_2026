@@ -94,6 +94,12 @@
         padding: 20px 14px 28px;
     }
 
+    .skill .row-skill{
+        display: grid;
+        gap: 18px;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+
     .skill__card{
         margin: 8px 0;
     }
@@ -105,5 +111,19 @@
 
     .skill__image{
         max-height: 122px;
+    }
+}
+
+@media(max-width: 480px){
+    .skill{
+        padding: 18px 10px 24px;
+    }
+
+    .skill .row-skill{
+        grid-template-columns: 1fr;
+    }
+
+    .skill__card{
+        border-radius: 20px;
     }
 }
